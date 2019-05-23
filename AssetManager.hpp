@@ -1,8 +1,10 @@
 #ifndef ASSET_MANAGER_HPP
 #define ASSET_MANAGER_HPP
 
-#include <map>
 
+#include <SFML/Audio.hpp>
+
+#include <map>
 
 namespace sf {
     class Texture;
@@ -12,14 +14,14 @@ namespace sf {
 namespace Checkers {
     class AssetManager {
     public:
-        AssetManager() { }
-        ~AssetManager() { }
+        AssetManager() { };
 
         void loadTexture(std::string name, std::string fileName);
         sf::Texture& getTexture(std::string name);
 
         void loadFont(std::string name, std::string fileName);
         sf::Font& getFont(std::string name);
+        sf::Music sound;
 
     private:
         std::map<std::string, sf::Texture> _textures;
@@ -27,4 +29,4 @@ namespace Checkers {
     };
 }
 
-#endif // ASSET_MANAGER_HPP
+#endif

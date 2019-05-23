@@ -16,4 +16,4 @@ namespace Checkers {
     };
 }
 
-#endif // STATE_HPP
+#endif

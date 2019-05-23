@@ -1,11 +1,12 @@
 #include <SFML/Graphics.hpp>
-
 #include "AssetManager.hpp"
 
 namespace Checkers {
+
     void AssetManager::loadTexture(std::string name, std::string fileName) {
         sf::Texture tex;
         if (tex.loadFromFile(fileName)) {
+						tex.setRepeated(true);
             _textures[name] = tex;
         }
     }
